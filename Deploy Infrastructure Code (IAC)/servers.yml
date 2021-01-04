@@ -84,8 +84,7 @@ Resources:
           systemctl start apache2.service
           rm /var/www/html/index.html
           cd /var/www/html
-          aws s3 cp s3://udacity-08/udacity.zip .
-          unzip -o udacity.zip
+          aws s3 cp s3://udacity-08/index.html .
       ImageId: !Ref WebServerImageId
       SecurityGroups:
       - Ref: WebServerSecGroup
